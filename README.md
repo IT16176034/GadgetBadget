@@ -26,6 +26,7 @@ sell their products via company’s online platform.**
 5.	Funding & Payments
 
 **Technology Stack**
- RESTful web services: Java – JAX-RS (Jersey) on Tomcat
- DB: MySQL
- Client: A compatible test client (will be discussed in practical classes).
+
+RESTful web services: Java – JAX-RS (Jersey) on Tomcat
+DB: MySQL
+Client: A compatible test client (will be discussed in practical classes).
