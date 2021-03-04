@@ -1,10 +1,17 @@
 # GadgetBadget
 PAF Group Project 2021
 
-GadgetBadget (GB) is a company who funds innovative projects and help the young researches to
-sell their products via company’s online platform.
+**GadgetBadget (GB) is a company who funds innovative projects and help the young researches to
+sell their products via company’s online platform.**
 
-Web Services
+**Actors**
+1. Researcher
+2. Funding Budies
+3. Project
+4. Customer
+5. Administrator
+
+**Web Services**
 1.	Authentication & Authorization
 2.	Projects
 3.	Researcher
