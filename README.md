@@ -1,3 +1,4 @@
+![PAF](https://user-images.githubusercontent.com/80050477/109996344-23a9c780-7d35-11eb-8b18-8d3f98b9f968.png)
 # GadgetBadget
 IT3030 Programming Applications and Frameworks - Group Assignment 2021
 
