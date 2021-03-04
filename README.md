@@ -14,6 +14,10 @@ sell their products via company’s online platform.**
 
 ![PAF](https://user-images.githubusercontent.com/80050477/109996344-23a9c780-7d35-11eb-8b18-8d3f98b9f968.png)
 
+**Flows**
+
+![PAF](https://user-images.githubusercontent.com/80050477/109996696-7b483300-7d35-11eb-8bf1-954f9475e121.png)
+
 **Web Services**
 1.	Authentication & Authorization
 2.	Projects
