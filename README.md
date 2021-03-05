@@ -33,4 +33,4 @@ DB: MySQL
 Client: A compatible test client (will be discussed in practical classes).
 
 **Task Allocation**
-https://mysliit-my.sharepoint.com/:x:/g/personal/it16176034_my_sliit_lk/EXvpjy_LNftIo_HuFu8sSlUBI0A_Umi8Cr8adxr3JnsZcA?e=LqBkGd
+https://mysliit-my.sharepoint.com/:x:/g/personal/it16176034_my_sliit_lk/EXvpjy_LNftIo_HuFu8sSlUBW_zCic4Zu9AsgfLsyp2uDg?e=TsSkvv
