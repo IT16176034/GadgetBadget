@@ -33,4 +33,4 @@ DB: MySQL
 Client: A compatible test client (will be discussed in practical classes).
 
 **Task Allocation**
-[Paf-Task Allocation_V1.0.xlsx](https://github.com/IT16155244/GadgetBadget/files/6090023/Paf-Task.Allocation_V1.0.xlsx)
+https://mysliit-my.sharepoint.com/:x:/g/personal/it16176034_my_sliit_lk/EXvpjy_LNftIo_HuFu8sSlUBI0A_Umi8Cr8adxr3JnsZcA?e=LqBkGd
