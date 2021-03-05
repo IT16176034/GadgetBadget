@@ -31,3 +31,6 @@ sell their products via company’s online platform.**
 RESTful web services: Java – JAX-RS (Jersey) on Tomcat
 DB: MySQL
 Client: A compatible test client (will be discussed in practical classes).
+
+**Task Allocation**
+[Paf-Task Allocation_V1.0.xlsx](https://github.com/IT16155244/GadgetBadget/files/6090023/Paf-Task.Allocation_V1.0.xlsx)
