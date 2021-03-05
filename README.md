@@ -16,7 +16,8 @@ sell their products via company’s online platform.**
 
 **Flows**
 
-![PAF](https://user-images.githubusercontent.com/80050477/109996696-7b483300-7d35-11eb-8bf1-954f9475e121.png)
+![Paf-flowchart-2021](https://user-images.githubusercontent.com/36621544/110106149-530d1280-7dcf-11eb-8952-0faae4cfb7d3.png)
+
 
 **Web Services**
 1.	Authentication & Authorization
