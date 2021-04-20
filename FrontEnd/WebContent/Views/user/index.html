@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GadgetBudget</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/FrontEnd/Controllers/userControllers/main.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .checked {
+  color: orange;
+	}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="purchaseHistory.html">Purchase History</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="../images/project-management.png" alt="Image">
+        <div class="carousel-caption">
+          <h3>Buy</h3>
+          <p>Projects.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="../images/Team-project.jpeg" alt="Image">
+        <div class="carousel-caption">
+          <h3>Buy</h3>
+          <p>Projects...</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<br/><br/>
+	<div class="row">
+	<div class="center-block">
+  	<div class="form-group" style="text-align: center;">
+         <input type="text" class="form-control" id="lname" name="lname" placeholder="Search" style="width: 600px;margin-left: auto;margin-right: auto;">
+     </div>
+     <div class="form-group" style="text-align: center;">
+     	<input type="Button"  value="Search"/>
+     </div>
+     </div>
+     </div>
+<div class="container text-center">    
+  <h3><u>Explore new Projects</u></h3><br>
+  <div class="row" id="newProjects">
+  
+  </div>
+  <br/>
+  
+  <h3><u>All Projects</u></h3><br>
+  <div class="row" id="allProjects">
+ 	
+  </div>
+   <div class="row collapse" id="allProjectsCollapse">
+                     
+   </div>
+    <div class="col-md-12">
+           <button class="read-more" data-toggle="collapse" data-target="#allProjectsCollapse"  id="allProjectsCollapseBtn" onclick="showMoreLess(this.id)">See More</button>
+    </div>
+  
+</div><br>
+
+<!-- view modal -->
+<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+		  <div class="row content">
+		    <div class="col-sm-5 sidenav">
+		      <img src="" id="projectImg" class="img-responsive" style="width:100% ;height:240px" alt="Image">
+		    </div>
+		
+		    <div class="col-sm-6">
+		      <h2 id="projectName"></h2>
+		      <h5>Price :<span id="projectPrice"></span>.00 LKR</h5>
+		      <p id="projectDescription"></p>
+		      <br><br>
+		    </div>
+		    
+		     <div class="col-sm-3">
+		      <h4>Ratings </h4>
+		      <span class="fa fa-star" id="star1"></span>
+              <span class="fa fa-star" id="star2"></span>
+              <span class="fa fa-star" id="star3"></span>
+              <span class="fa fa-star" id="star4"></span>
+              <span class="fa fa-star" id="star5"></span>
+		    </div>
+		    <div class="col-sm-4" id="reviewArea">
+		      <h4>Reviews </h4>
+		    </div>
+		    
+		  </div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-toggle='modal' data-target='#paymentModal' onclick="openPayment()">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- view modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="viewModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+		    <div class="row">
+		        <div class="col-xs-10 col-md-4" style="margin: 0px 90px 0px 90px;">
+		            <div class="panel panel-default">
+		                <div class="panel-heading">
+		                    <h3 class="panel-title">
+		                        Payment Details
+		                    </h3>
+
+		                </div>
+		                <div class="panel-body">
+		                    <form role="form">
+		                    <div class="form-group">
+		                        <label for="cardNumber">
+		                            CARD NUMBER</label>
+		                        <div class="input-group">
+		                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+		                                required autofocus />
+		                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-xs-7 col-md-7">
+		                            <div class="form-group">
+		                                <label for="expityMonth">
+		                                    EXPIRY DATE</label>
+		                                <div class="col-xs-6 col-lg-6 pl-ziro">
+		                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
+		                                </div>
+		                                <div class="col-xs-6 col-lg-6 pl-ziro">
+		                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
+		                            </div>
+		                        </div>
+		                        <div class="col-xs-5 col-md-5 pull-right">
+		                            <div class="form-group">
+		                                <label for="cvCode">
+		                                    CV CODE</label>
+		                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+		                            </div>
+		                        </div>
+		                    </div>
+		                    </form>
+		                </div>
+		            </div>
+		            <ul class="nav nav-pills nav-stacked">
+		                <li class="active"><a><span class="badge pull-right" id="projectPriceTot"></span> Final Payment</a>
+		                </li>
+		            </ul>
+		            <br/>
+		            <a href="#" class="btn btn-success btn-lg btn-block" role="button" onclick="doPay()">Pay</a>
+		        </div>
+		    </div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
+
